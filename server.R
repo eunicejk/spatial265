@@ -5,7 +5,7 @@ library(lubridate)
 
 
 ## Read in and prepare data
-a <- read.csv("data/nyc_subset.csv")
+a <- read.csv("nyc_subset.csv")
 data <- a[complete.cases(a),]
 
 tt <- strptime(as.character(data$Created.Date), "%m/%d/%y %H:%M", tz = "EST")
